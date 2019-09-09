@@ -43,7 +43,7 @@
 
 
                 <div class="card-body">
-                    <table class="table">
+                    <table class="table" id="tablaproductos">
                         <thead class=" text-primary text-center">
                         <th>ID</th>
                         <th>Nombre</th>
