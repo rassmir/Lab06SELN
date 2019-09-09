@@ -18,6 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::post('/guardaDeporte', 'DeporteController@store')->name('guardarDeporte');
+Route::post('/guardaCategoria', 'CategoriaController@store')->name('guardarCategoria');
 
-Route::view('/deporte','registrarDeporte');
+Route::get('/producto', 'ProductoController@index')->name('producto.index')->middleware('auth');
+Route::post('/productoSave', 'ProductoController@store')->name('productoSave');
+

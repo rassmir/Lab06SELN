@@ -18,25 +18,26 @@
 
         Tip 2: you can also add an image using data-image tag
     -->
-        <div class="logo">
+        <div class="logo" >
 
                 <img src="{{asset('img/logo.svg')}}">
 
         </div>
         <div class="sidebar-wrapper">
             <ul class="nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="javascript:void(0)">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('home')}}">
                         <i class="material-icons">assignment</i>
-                        <p>Crear Deporte</p>
+                        <p>Crear Categoria</p>
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="javascript:void(0)">
-                        <i class="material-icons">accessibility_new</i>
-                        <p>Registrar Competicion</p>
+                    <a class="nav-link" href="{{route('producto.index')}}">
+                        <i class="material-icons">shopping_basket</i>
+                        <p>Registrar Producto</p>
                     </a>
                 </li>
+
                 <!-- your sidebar here -->
             </ul>
         </div>

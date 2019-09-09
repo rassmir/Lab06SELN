@@ -9,35 +9,52 @@
             </button>
         </div>
     @endif
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="card card-nav-tabs" style="width: 800px">
-            <div class="card-body">
-                <form method="post" action="{{route('guardarDeporte')}}" enctype="multipart/form-data">
+<div class="container-fluid">
+    <div class="row">
+
+          <div class="card card-nav-tabs" style="width: 800px">
+
+              <div class="card-body">
+                 <form method="post" action="{{route('guardarCategoria')}}">
                     @csrf
                     <div class="form-group">
-                        <label for="deport" class="bmd-label-floating" >Deporte</label>
-                        <input type="text" class="form-control" id="deport" name="name">
-                    </div>
-                    <div class="form-group form-file-upload form-file-multiple">
-                        <input type="file" multiple="" class="inputFileHidden">
-                        <div class="input-group">
-                            <input type="text" class="form-control inputFileVisible" placeholder="Campo de juego" name="img">
-                            <span class="input-group-btn">
-                                <button type="button" class="btn btn-fab btn-round btn-primary">
-                                    <i class="material-icons">attach_file</i>
-                                </button>
-                            </span>
-                        </div>
+                        <label for="category" class="bmd-label-floating">Categoria</label>
+                        <input type="text" class="form-control" id="category" name="name">
                     </div>
                     <button type="submit" class="btn btn-info">Guardar</button>
-                </form>
-
+                 </form>
 
             </div>
-        </div>
+              <div class="card-body">
+                  <table class="table">
+                      <thead class=" text-primary text-center">
+                      <th>ID</th>
+                      <th>Nombre</th>
+                      <th>Opciones</th>
+                      </thead>
+                      <tbody>
+                      @foreach($categorias as $categoria)
+                      <tr class="text-center">
+                          <td>{{$categoria->id}}</td>
+                              <td>{{$categoria->name}}</td>
+                          <td>
+                          <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editarproducto">
+                              <i class="material-icons">edit</i>
+                          </button>
+                              <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#eliminarproducto">
+                                  <i class="material-icons">close</i>
+                              </button>
+                          </td>
+                      </tr>
+                      @endforeach
+                      </tbody>
+                  </table>
 
 
+
+              </div>
+
+          </div>
     </div>
-</div>
+        </div>
 @endsection

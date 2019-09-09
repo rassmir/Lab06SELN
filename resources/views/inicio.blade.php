@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Panamericanos-2019</title>
-    <link href="{{ secure_asset('css/css/bootstrap.css') }}" rel="stylesheet">
-    <link href="{{ secure_asset('css/css/mdb.css') }}" rel="stylesheet">
-    <link href="{{ secure_asset('css/css/style.css') }}" rel="stylesheet">
-    <link href="{{ secure_asset('css/css/accordion-extended.css') }}" rel="stylesheet">
-    <link href="{{ secure_asset('css/css/megamenu.css') }}" rel="stylesheet">
-    <link href="{{ secure_asset('css/css/animations-extended.css') }}" rel="stylesheet">
-    <link href="{{ secure_asset('css/css/lightbox.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/css/mdb.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/css/accordion-extended.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/css/megamenu.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/css/animations-extended.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/css/lightbox.css') }}" rel="stylesheet">
 
 </head>
 <body>
@@ -20,7 +20,7 @@
 
         <!-- Brand -->
         <a class="navbar-brand" href="#">
-            <img src="{{ secure_asset('img/logo.svg') }}" height="65" alt="panamericanos logo">
+            <img src="{{ asset('img/logo.svg') }}" height="65" alt="panamericanos logo">
         </a>
 
         <!-- Collapse -->
@@ -32,7 +32,7 @@
     </div>
 </nav>
 
-<div class="view full-page-intro" style="background-image: url('{{ secure_asset('img/slider3.png') }}'); background-repeat: no-repeat; background-size: cover;">
+<div class="view full-page-intro" style="background-image: url('{{ asset('img/fondo1.jpg') }}'); background-repeat: no-repeat; background-size: cover;">
     <!-- Content -->
     <div class="container" style="margin-top: 110px" >
         <div class="row wow fadeIn">
@@ -136,10 +136,10 @@
             <!--Grid column-->
             <div class="col-md-6 mb-4 white-text text-center text-md-left">
 
-                <h1 class="display-4 font-weight-bold">No te olvides ... !</h1>
+                <h1 class="display-4 font-weight-bold text-primary">! Si se puede imaginar se puede programar !</h1>
                 <hr class="hr-light ">
                 <p>
-                    <strong>Iniciar Sesión para ver el listado de deportes</strong>
+                    <strong class="text-danger">Iniciar Sesión para validar</strong>
                 </p>
             </div>
         </div>
@@ -152,12 +152,12 @@
 
 
 <!-- Scripts -->
-<script src="{{ secure_asset('js/js/jquery-3.3.1.min.js') }}"></script>
-<script src="{{ secure_asset('js/js/bootstrap.js') }}" ></script>
-<script src="{{ secure_asset('js/js/mdb.js') }}" ></script>
-<script src="{{ secure_asset('js/js/dropdown.js') }}" ></script>
-<script src="{{ secure_asset('js/js/popper.min.js') }}" ></script>
-<script src="{{ secure_asset('js/js/sidenav.js') }}" ></script>
+<script src="{{ asset('js/js/jquery-3.3.1.min.js') }}"></script>
+<script src="{{ asset('js/js/bootstrap.js') }}" ></script>
+<script src="{{ asset('js/js/mdb.js') }}" ></script>
+<script src="{{ asset('js/js/dropdown.js') }}" ></script>
+<script src="{{ asset('js/js/popper.min.js') }}" ></script>
+<script src="{{ asset('js/js/sidenav.js') }}" ></script>
 <!-- Fonts -->
 <script src="https://kit.fontawesome.com/0277df775c.js"></script>
 </body>

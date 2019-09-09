@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Categoria;
 use Illuminate\Http\Request;
-use App\Deporte;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\DB;
-class DeporteController extends Controller
+
+class CategoriaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,10 @@ class DeporteController extends Controller
      */
     public function index()
     {
-        //
+        $categorias = Categoria::all();
+        return view('home', array(
+            'categorias' => $categorias
+        ));
     }
 
     /**
@@ -36,16 +38,9 @@ class DeporteController extends Controller
      */
     public function store(Request $request)
     {
-        $deportes=new Deporte();
-
-        $img=$request->file('img');
-        if($img){
-            $image_path=$img->getClientOriginalName();
-            Storage::disk('images')->put($image_path,\File::get($img));
-            $deportes->imgg=$image_path;
-        }
-         $deportes->name=$request->input('name');
-         $deportes->save();
+        $categorias=new Categoria();
+        $categorias->name=$request->input('name');
+        $categorias->save();
         return redirect()->route('home')->with(array(
             'message'=>'Guardado Correctamente !!'
         ));
@@ -54,10 +49,10 @@ class DeporteController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Categoria $categoria)
     {
         //
     }
@@ -65,10 +60,10 @@ class DeporteController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Categoria $categoria)
     {
         //
     }
@@ -77,10 +72,10 @@ class DeporteController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Categoria $categoria)
     {
         //
     }
@@ -88,10 +83,10 @@ class DeporteController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Categoria $categoria)
     {
         //
     }

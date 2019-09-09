@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Producto;
+use App\Categoria;
 use Illuminate\Http\Request;
 
-class CompeticionController extends Controller
+class ProductoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +15,12 @@ class CompeticionController extends Controller
      */
     public function index()
     {
-        //
+        $categorias = Categoria::all();
+        return view('registrarProducto', array(
+            'categorias' => $categorias
+        ));
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -34,16 +40,25 @@ class CompeticionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $productos=new Producto();
+
+        $productos->name=$request->input('name');
+        $productos->price=$request->input('price');
+        $productos->categorias_id=$request->input('categorias_id');
+        $productos->stock=$request->input('stock');
+        $productos->save();
+        return redirect()->route('producto.index')->with(array(
+            'message'=>'Guardado Correctamente !!'
+        ));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Producto  $producto
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Producto $producto)
     {
         //
     }
@@ -51,10 +66,10 @@ class CompeticionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Producto  $producto
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Producto $producto)
     {
         //
     }
@@ -63,10 +78,10 @@ class CompeticionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Producto  $producto
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Producto $producto)
     {
         //
     }
@@ -74,10 +89,10 @@ class CompeticionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Producto  $producto
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Producto $producto)
     {
         //
     }

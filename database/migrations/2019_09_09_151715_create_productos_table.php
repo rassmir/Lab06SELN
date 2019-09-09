@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCompeticionsTable extends Migration
+class CreateProductosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateCompeticionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('competicions', function (Blueprint $table) {
+        Schema::create('productos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->unsignedBigInteger('deportes_id');
-            $table->foreign('deportes_id')->references('id')->on('deportes');
-            $table->longText('description');
-            $table->longText('history');
+            $table->string('price');
+            $table->unsignedBigInteger('categorias_id');
+            $table->foreign('categorias_id')->references('id')->on('categorias');
+            $table->string('stock');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateCompeticionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('competicions');
+        Schema::dropIfExists('productos');
     }
 }
