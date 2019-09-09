@@ -104,7 +104,7 @@
                                 </div>
                                 <div class="md-form mb-3">
                                     <input type="email" id="correo" class="form-control validate" name="email">
-                                    <label data-error="wrong" data-success="right" for="correo">Email</label>
+                                    <label data-error="wrong" data-success="right" for="correo">Correo Electrónico</label>
                                 </div>
 
                                 <div class="md-form mb-3">
@@ -113,7 +113,7 @@
                                 </div>
                                 <div class="md-form mb-3">
                                     <input type="password" id="confirmation" class="form-control validate" name="password_confirmation">
-                                    <label data-error="wrong" data-success="right" for="confirmation">Password Confirmation</label>
+                                    <label data-error="wrong" data-success="right" for="confirmation">Confirme Contraseña</label>
                                 </div>
                                 <!-- Sign in button -->
                                 <button class="btn btn-info btn-block" type="submit">Ingresar</button>

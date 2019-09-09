@@ -18,3 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/guardaDeporte', 'DeporteController@store')->name('guardarDeporte');
+
+Route::view('/deporte','registrarDeporte');

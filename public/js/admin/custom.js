@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
     $().ready(function() {
         $sidebar = $('.sidebar');
