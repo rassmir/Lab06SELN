@@ -16,8 +16,10 @@ class ProductoController extends Controller
     public function index()
     {
         $categorias = Categoria::all();
+        $productos = Producto::all();
         return view('registrarProducto', array(
-            'categorias' => $categorias
+            'categorias' => $categorias,
+            'productos' => $productos
         ));
     }
 

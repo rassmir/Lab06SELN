@@ -9,8 +9,9 @@
             </button>
         </div>
     @endif
-<div class="container-fluid">
-    <div class="row">
+<div class="container">
+
+    <div class=" row justify-content-center">
 
           <div class="card card-nav-tabs" style="width: 800px">
 
@@ -49,8 +50,6 @@
                       @endforeach
                       </tbody>
                   </table>
-
-
 
               </div>
 

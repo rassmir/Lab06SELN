@@ -11,7 +11,7 @@
     @endif
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-6">
+
             <div class="card card-nav-tabs" style="width: 800px">
                 <div class="card-body">
                     <form method="post" action="{{'productoSave'}}" >
@@ -39,13 +39,40 @@
                         </div>
                         <button type="submit" class="btn btn-info">Guardar</button>
                     </form>
-
-
                 </div>
-            </div>
-        </div>
-        <div class="col-md-6">
 
+
+                <div class="card-body">
+                    <table class="table">
+                        <thead class=" text-primary text-center">
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Categoria</th>
+                        <th>Stock</th>
+                        <th>Opciones</th>
+                        </thead>
+                        <tbody>
+                        @foreach($productos as $producto)
+                            <tr class="text-center">
+                                <td>{{$producto->id}}</td>
+                                <td>{{$producto->name}}</td>
+                                <td>{{$producto->price}}</td>
+                                <td>{{$producto->categorias->name}}</td>
+                                <td>{{$producto->stock}}</td>
+                                <td>
+                                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editarproducto">
+                                        <i class="material-icons">edit</i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#eliminarproducto">
+                                        <i class="material-icons">close</i>
+                                    </button>
+                                </td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
+                </div>
         </div>
         </div>
     </div>
