@@ -20,7 +20,7 @@
 
         <!-- Brand -->
         <a class="navbar-brand" href="#">
-            <img src="{{ asset('img/logo.svg') }}" height="65" alt="panamericanos logo">
+            <img src="{{ secure_asset('img/logo.svg') }}" height="65" alt="panamericanos logo">
         </a>
 
         <!-- Collapse -->
@@ -32,7 +32,7 @@
     </div>
 </nav>
 
-<div class="view full-page-intro" style="background-image: url('{{ asset('img/slider3.png') }}'); background-repeat: no-repeat; background-size: cover;">
+<div class="view full-page-intro" style="background-image: url('{{ secure_asset('img/slider3.png') }}'); background-repeat: no-repeat; background-size: cover;">
     <!-- Content -->
     <div class="container" style="margin-top: 110px" >
         <div class="row wow fadeIn">
