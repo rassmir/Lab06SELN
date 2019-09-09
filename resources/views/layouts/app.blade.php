@@ -5,13 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Panamericanos-2019</title>
-    <link href="{{ asset('css/admin/bootstrap.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/admin/mdb.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/admin/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/admin/accordion-extended.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/admin/megamenu.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/admin/animations-extended.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/admin/lightbox.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/admin/material-dashboard.css') }}" rel="stylesheet">
 
 </head>
 <body class="dark-edition">
@@ -91,14 +85,14 @@
     </div>
 </div>
 
-    <script src="{{ asset('js/admin/jquery.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('js/admin/popper.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('js/admin/bootstrap-material-design.min.js') }}" type="text/javascript"></script>
+    <script src="{{ secure_asset('js/admin/jquery.min.js') }}" type="text/javascript"></script>
+    <script src="{{ secure_asset('js/admin/popper.min.js') }}" type="text/javascript"></script>
+    <script src="{{ secure_asset('js/admin/bootstrap-material-design.min.js') }}" type="text/javascript"></script>
     <script src="https://unpkg.com/default-passive-events" type="text/javascript"></script>
-    <script src="{{ asset('js/admin/perfect-scrollbar.jquery.min.js') }}"type="text/javascript" ></script>
+    <script src="{{ secure_asset('js/admin/perfect-scrollbar.jquery.min.js') }}"type="text/javascript" ></script>
     <script async defer src="https://buttons.github.io/buttons.js" type="text/javascript"></script>
-    <script src="{{ asset('js/admin/material-dashboard.js?v=2.1.0') }}" type="text/javascript"></script>
-    <script src="{{ asset('js/admin/custom.js') }}"type="text/javascript" ></script>
+    <script src="{{ secure_asset('js/admin/material-dashboard.js?v=2.1.0') }}" type="text/javascript"></script>
+    <script src="{{ secure_asset('js/admin/custom.js') }}"type="text/javascript" ></script>
     <!-- Fonts -->
     <script src="https://kit.fontawesome.com/0277df775c.js"></script>
 </body>
