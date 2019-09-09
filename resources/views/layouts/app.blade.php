@@ -20,7 +20,7 @@
     -->
         <div class="logo" >
 
-                <img src="{{asset('img/logo.svg')}}">
+                <img src="{{secure_asset('img/logo.svg')}}">
 
         </div>
         <div class="sidebar-wrapper">

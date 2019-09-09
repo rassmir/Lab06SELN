@@ -28,4 +28,19 @@ class HomeController extends Controller
             'categorias' => $categorias
         ));
     }
+    public function store(Request $request)
+    {
+        $categorias=new Categoria();
+        $categorias->name=$request->input('name');
+        $categorias->save();
+        return redirect()->route('home')->with(array(
+            'message'=>'Guardado Correctamente !!'
+        ));
+    }
+    public function destroy($id)
+    {
+        $categorias=Categoria::find($id);
+        $categorias->delete($id);
+        return redirect()->route('home');
+    }
 }

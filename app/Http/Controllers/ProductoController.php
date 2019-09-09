@@ -43,7 +43,6 @@ class ProductoController extends Controller
     public function store(Request $request)
     {
         $productos=new Producto();
-
         $productos->name=$request->input('name');
         $productos->price=$request->input('price');
         $productos->categorias_id=$request->input('categorias_id');
@@ -83,9 +82,18 @@ class ProductoController extends Controller
      * @param  \App\Producto  $producto
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Producto $producto)
+    public function update(Request $request, $id)
     {
-        //
+        $productos=new Producto();
+        $productos=Producto::findOrFail($id);
+        $productos->name=$request->input('name');
+        $productos->price=$request->input('price');
+        $productos->categorias_id=$request->input('categorias_id');
+        $productos->stock=$request->input('stock');
+        $productos->save();
+        return redirect()->route('producto.index')->with(array(
+            'message'=>'Guardado Correctamente !!'
+        ));
     }
 
     /**
@@ -94,8 +102,10 @@ class ProductoController extends Controller
      * @param  \App\Producto  $producto
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Producto $producto)
+    public function destroy($id)
     {
-        //
+        $productos=Producto::find($id);
+        $productos->delete($id);
+        return redirect()->route('producto.index');
     }
 }
