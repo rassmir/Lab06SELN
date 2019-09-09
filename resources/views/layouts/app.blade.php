@@ -91,14 +91,14 @@
     </div>
 </div>
 
-    <script src="{{ asset('js/admin/jquery.min.js') }}" ></script>
-    <script src="{{ asset('js/admin/popper.min.js') }}" ></script>
-    <script src="{{ asset('js/admin/bootstrap-material-design.min.js') }}" ></script>
-    <script src="https://unpkg.com/default-passive-events"></script>
-    <script src="{{ asset('js/admin/perfect-scrollbar.jquery.min.js') }}" ></script>
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script src="{{ asset('js/admin/material-dashboard.js?v=2.1.0') }}" ></script>
-    <script src="{{ asset('js/admin/custom.js') }}" ></script>
+    <script src="{{ asset('js/admin/jquery.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/admin/popper.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/admin/bootstrap-material-design.min.js') }}" type="text/javascript"></script>
+    <script src="https://unpkg.com/default-passive-events" type="text/javascript"></script>
+    <script src="{{ asset('js/admin/perfect-scrollbar.jquery.min.js') }}"type="text/javascript" ></script>
+    <script async defer src="https://buttons.github.io/buttons.js" type="text/javascript"></script>
+    <script src="{{ asset('js/admin/material-dashboard.js?v=2.1.0') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/admin/custom.js') }}"type="text/javascript" ></script>
     <!-- Fonts -->
     <script src="https://kit.fontawesome.com/0277df775c.js"></script>
 </body>
