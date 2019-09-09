@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Panamericanos-2019</title>
-    <link href="{{ asset('css/admin/material-dashboard.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/admin/material-dashboard.css') }}" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
@@ -82,18 +82,18 @@
     </div>
 </div>
 
-    <script src="{{ asset('js/admin/jquery.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('js/admin/popper.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('js/admin/bootstrap-material-design.min.js') }}" type="text/javascript"></script>
+    <script src="{{ secure_asset('js/admin/jquery.min.js') }}" type="text/javascript"></script>
+    <script src="{{ secure_asset('js/admin/popper.min.js') }}" type="text/javascript"></script>
+    <script src="{{ secure_asset('js/admin/bootstrap-material-design.min.js') }}" type="text/javascript"></script>
     <script src="https://unpkg.com/default-passive-events" type="text/javascript"></script>
-    <script src="{{ asset('js/admin/perfect-scrollbar.jquery.min.js') }}"type="text/javascript" ></script>
+    <script src="{{ secure_asset('js/admin/perfect-scrollbar.jquery.min.js') }}"type="text/javascript" ></script>
     <script async defer src="https://buttons.github.io/buttons.js" type="text/javascript"></script>
-    <script src="{{ asset('js/admin/material-dashboard.js?v=2.1.0') }}" type="text/javascript"></script>
-    <script src="{{ asset('js/admin/bootstrap-selectpicker.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('js/admin/moment.min.js') }}" type="text/javascript"></script>
+    <script src="{{ secure_asset('js/admin/material-dashboard.js?v=2.1.0') }}" type="text/javascript"></script>
+    <script src="{{ secure_asset('js/admin/bootstrap-selectpicker.js') }}" type="text/javascript"></script>
+    <script src="{{ secure_asset('js/admin/moment.min.js') }}" type="text/javascript"></script>
 
-    <script src="{{ asset('js/admin/custom.js') }}"type="text/javascript" ></script>
-    <script src="{{ asset('js/admin/complemento.js') }}"type="text/javascript" ></script>
+    <script src="{{ secure_asset('js/admin/custom.js') }}"type="text/javascript" ></script>
+    <script src="{{ secure_asset('js/admin/complemento.js') }}"type="text/javascript" ></script>
     <!-- Fonts -->
     <script src="https://kit.fontawesome.com/0277df775c.js"></script>
 </body>
