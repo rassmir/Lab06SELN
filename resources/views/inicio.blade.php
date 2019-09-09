@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Panamericanos-2019</title>
-    <link href="{{ asset('css/css/bootstrap.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/css/mdb.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/css/accordion-extended.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/css/megamenu.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/css/animations-extended.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/css/lightbox.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/css/mdb.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/css/style.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/css/accordion-extended.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/css/megamenu.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/css/animations-extended.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/css/lightbox.css') }}" rel="stylesheet">
 
 </head>
 <body>
@@ -152,12 +152,12 @@
 
 
 <!-- Scripts -->
-<script src="{{ asset('js/js/jquery-3.3.1.min.js') }}"></script>
-<script src="{{ asset('js/js/bootstrap.js') }}" ></script>
-<script src="{{ asset('js/js/mdb.js') }}" ></script>
-<script src="{{ asset('js/js/dropdown.js') }}" ></script>
-<script src="{{ asset('js/js/popper.min.js') }}" ></script>
-<script src="{{ asset('js/js/sidenav.js') }}" ></script>
+<script src="{{ secure_asset('js/js/jquery-3.3.1.min.js') }}"></script>
+<script src="{{ secure_asset('js/js/bootstrap.js') }}" ></script>
+<script src="{{ secure_asset('js/js/mdb.js') }}" ></script>
+<script src="{{ secure_asset('js/js/dropdown.js') }}" ></script>
+<script src="{{ secure_asset('js/js/popper.min.js') }}" ></script>
+<script src="{{ secure_asset('js/js/sidenav.js') }}" ></script>
 <!-- Fonts -->
 <script src="https://kit.fontawesome.com/0277df775c.js"></script>
 </body>
